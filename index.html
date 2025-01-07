@@ -626,6 +626,27 @@ footer {
             document.getElementById("cookieBanner").style.display = "none";
         }
     }
+
+ //  menu 
+document.addEventListener('DOMContentLoaded', () => {
+  const menu = document.querySelector('.menu');
+  const dropdown = document.querySelector('.dropdown');
+
+  // Toggle dropdown on menu click
+  menu.addEventListener('click', () => {
+    dropdown.classList.toggle('show');
+  });
+
+  // Close dropdown if clicking outside
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target)) {
+      dropdown.classList.remove('show');
+    }
+  });
+});
+
+
+    
 </script>
 
 
