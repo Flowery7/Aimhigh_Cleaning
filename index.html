@@ -544,88 +544,88 @@ footer {
     </footer>
 
 
-<div id="cookie-banner" style="display: flex; justify-content: space-between; align-items: center; background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 10px; position: fixed; bottom: 0; width: 100%; z-index: 1000;">
-  <div>
-    <p style="margin: 0;">
-      We use cookies for Google Analytics to improve your experience.
-      <a href="privacy.html" target="_blank" style="text-decoration: underline;">Learn more</a>
-    </p>
-  </div>
-  <div>
-    <button id="accept-cookies" style="margin-right: 10px;">Accept</button>
-    <button id="reject-cookies">Decline</button>
-  </div>
+ <!-- Cookie Banner -->
+<div id="cookieBanner" style="
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    margin: auto;
+">
+    <p style="margin-bottom: 10px;">This site uses cookies. By clicking a button, you accept or reject our use of cookies.</p>
+    <div style="display: flex; gap: 10px;">
+        <button onclick="acceptCookies()" style="
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        ">Accept</button>
+        <button onclick="rejectCookies()" style="
+            background-color: #E83437;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        ">Reject</button>
+    </div>
+    <a href="privacy.html" style="color: #88A4E3; text-decoration: underline; margin-top: 10px;">Privacy Policy</a>
 </div>
 
-
 <script>
-
-// navigation menu
-    document.addEventListener('DOMContentLoaded', function() {
-  const menuBtn = document.getElementById('menu-btn');
-  const dropdown = document.getElementById('dropdown');
-
-  menuBtn.addEventListener('click', function() {
-    dropdown.classList.toggle('show');
-  });
-
-  // Close dropdown if clicked outside
-  window.addEventListener('click', function(e) {
-    if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
-      dropdown.classList.remove('show');
-    }
-  });
-        
-
-
-
-
-     // Cookie banner
-  document.addEventListener("DOMContentLoaded", () => {
-    const cookieBanner = document.getElementById("cookie-banner");
-    const acceptButton = document.getElementById("accept-cookies");
-    const rejectButton = document.getElementById("reject-cookies");
-
-    // Check if user already made a choice
-    const userConsent = localStorage.getItem("cookieConsent");
-    if (userConsent) {
-      cookieBanner.style.display = "none";
-      if (userConsent === "accepted") {
-        loadGoogleAnalytics();
-      }
+    function acceptCookies() {
+        // Load cookies and Google Analytics
+        loadCookies();
+        document.getElementById("cookieBanner").style.display = "none";
+        localStorage.setItem('cookieConsent', 'accepted'); // Save consent in localStorage
     }
 
-    // Handle Accept Button
-    acceptButton.addEventListener("click", () => {
-      localStorage.setItem("cookieConsent", "accepted");
-      loadGoogleAnalytics();
-      cookieBanner.style.display = "none";
-    });
+    function rejectCookies() {
+        document.getElementById("cookieBanner").style.display = "none";
+        localStorage.setItem('cookieConsent', 'rejected'); // Save rejection in localStorage
+    }
 
-    // Handle Reject Button
-    rejectButton.addEventListener("click", () => {
-      localStorage.setItem("cookieConsent", "rejected");
-      cookieBanner.style.display = "none";
-    });
+    function loadCookies() {
+        // Load Google Analytics dynamically
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-MXBZLCZYKY';
+        document.head.appendChild(script);
 
-    // Function to load Google Analytics script
-    function loadGoogleAnalytics() {
-      const script = document.createElement("script");
-      script.src = "https://www.googletagmanager.com/gtag/js?id=YOUR_GOOGLE_ANALYTICS_ID";
-      script.async = true;
-      document.head.appendChild(script);
+        script.onload = function() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-MXBZLCZYKY'); // Replace with your GA ID
+        };
+       
+        console.log('Google Analytics loaded');
+    }
 
-      script.onload = () => {
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-          dataLayer.push(arguments);
+    // Check if the user has already made a choice
+    window.onload = function() {
+        const consent = localStorage.getItem('cookieConsent');
+        if (consent === 'accepted') {
+            loadCookies(); // Automatically load cookies if previously accepted
+            document.getElementById("cookieBanner").style.display = "none";
+        } else if (consent === 'rejected') {
+            document.getElementById("cookieBanner").style.display = "none";
         }
-        gtag("js", new Date());
-        gtag("config", "YOUR_GOOGLE_ANALYTICS_ID");
-      };
     }
-  });
 </script>
 
 
