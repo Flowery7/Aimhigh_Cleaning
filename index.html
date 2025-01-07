@@ -374,22 +374,7 @@ footer {
                 </div>
             </div>
 
-<script> 
-    document.addEventListener('DOMContentLoaded', function() {
-  const menuBtn = document.getElementById('menu-btn');
-  const dropdown = document.getElementById('dropdown');
 
-  menuBtn.addEventListener('click', function() {
-    dropdown.classList.toggle('show');
-  });
-
-  // Close dropdown if clicked outside
-  window.addEventListener('click', function(e) {
-    if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
-      dropdown.classList.remove('show');
-    }
-  });
-        </script>
 
             
         </nav>
@@ -574,6 +559,28 @@ footer {
 
 
 <script>
+
+// navigation menu
+    document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.getElementById('menu-btn');
+  const dropdown = document.getElementById('dropdown');
+
+  menuBtn.addEventListener('click', function() {
+    dropdown.classList.toggle('show');
+  });
+
+  // Close dropdown if clicked outside
+  window.addEventListener('click', function(e) {
+    if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.remove('show');
+    }
+  });
+        
+
+
+
+
+     // Cookie banner
   document.addEventListener("DOMContentLoaded", () => {
     const cookieBanner = document.getElementById("cookie-banner");
     const acceptButton = document.getElementById("accept-cookies");
