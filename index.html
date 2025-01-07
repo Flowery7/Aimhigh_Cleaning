@@ -603,14 +603,14 @@ footer {
         // Load Google Analytics dynamically
         const script = document.createElement('script');
         script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-MXBZLCZYKY';
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-';
         document.head.appendChild(script);
 
         script.onload = function() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-MXBZLCZYKY'); // Replace with your GA ID
+            gtag('config', 'G-'); // Replace with your GA ID
         };
        
         console.log('Google Analytics loaded');
