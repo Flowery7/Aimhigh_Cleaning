@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="keywords" content="cleaning, deep clean, spring clean, domestic cleaning, Wellington, Bridgwater, Chard, Ilminster, Watchet, Williton, North Petherton, Burnham-on-Sea, Langport, Minehead, Bishops Lydeard, Norton Fitzwarren, Staplegrove, Trull, Creech St Michael, North Curry, Hatch Beauchamp, West Monkton, Milverton, Wiveliscombe, Oake, Bradford-on-Tone, Churchinford, Corfe, Pitminster, Staple Fitzpaine, Burrowbridge, Fivehead, Curry Rivel, Broomfield, Cotford St Luke, Clatworthy, Stogumber, Stogursey, commercial cleaning, polishing, dusting, tidy, tidying">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium professional cleaning services in Taunton. Enquire for a quote today!">
+    
+    <title>Aim High Cleaning | Professional Cleaning Services in Taunton</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Professional Domestic Cleaning | Aim High Cleaning" />
+    <meta property="og:description" content="Premium cleaning services for domestic, deep cleans and end of tenancy." />
+    <meta property="og:image" content="https://www..co.uk/(imagae URL)" />
+    <meta property="og:url" content="https://www..co.uk" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Professional Domestic Cleaning Services | Aim High Cleaning" />
+    <meta name="twitter:description" content="High-quality professional cleaning services in Taunton." />
+    <meta name="twitter:image" content="IMAGE PATH" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <style>
+        :root {
+            --primary-color: #468faf;
+            --secondary-color: #61a5c2;
+            --accent-color: #89c2d9;
+            --light-color: #e7f3f9;
+            --dark-color: #2a6f97;
+            --text-color: #4d4d4d;
+            --light-text: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            overflow-x: hidden;
+            padding-top: 80px; /* Added to account for fixed navbar */
+        }
+        
+        h1, h2, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+           
+        }
+        h3 { 
+          font-family: 'Playfair Display',
+serif;
+font-weight: 600;
+color: #4d4d4d;
+          
+        }
+        .hero-section {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('cleaning_person.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    margin-top: -80px;
+}
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.98) !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .navbar.hidden {
+            transform: translateY(-100%);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+        }
+    
+        
+        .nav-link {
+            color: var(--dark-color) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+    
+
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-color);
+            border-color: var(--dark-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline-light {
+            border-radius: 30px;
+            padding: 10px 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-light:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .service-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            text: #4d4d4d;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-box {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+           
+        }
+        
+        .benefit-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .areas {
+          background-color: lightblue;
+          
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-info {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links h5 {
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .divider-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        .divider-image:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .bg-light-blue {
+            background-color: var(--light-color);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 70vh;
+                text-align: center;
+                margin-top: 0;
+            }
+            
+            body {
+                padding-top: 70px;
+            }
+            
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+            
+            .navbar-brand img {
+                height: 30px;
+            }
+            
+            .section-title {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="Aimhigh_logo.png" alt="Aim High Cleaning" style="height: 75px; margin-right: 8px;" loading="lazy">
+    Aim High Cleaning
+</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#areas">Areas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="#contact" class="btn btn-primary ms-lg-3">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h1 class="display-4 fw-bold mb-4">Professional Cleaning Services You Can Trust</h1>
+                    <p class="lead mb-5">Experience the Aim High difference with our premium cleaning services tailored to your needs. We deliver exceptional results with attention to detail and eco-friendly products.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contact" class="btn btn-primary">Book Now</a>
+                        <a href="#services" class="btn btn-outline-light">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Pricing Section -->
+<section id="pricing" class="py-5 bg-light-blue">
+    <div class="container py-5">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h2 class="section-title">Choose Your Cleaning Package</h2>
+                <p class="lead">Select the package that best fits your needs. Whether you need an hourly service, regular cleaning, or a comprehensive package, we've got you covered!</p>
+                <img src="Aimhigh_logo.png" alt="Aim High Cleaning" style="height: 100px; position: center;" loading="lazy">
+            </div>
+        </div>
+        <div class="row g-4">
+            <!-- Hourly Rate Package -->
+            <div class="col-md-4">
+                <div class="service-card card h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Hourly Rate</h3>
+                        <p class="mb-0">From £25 per hour. Perfect for smaller tasks or one-time cleaning needs. Pay only for the time spent cleaning!</p>
+                        <a href="#contact" class="btn btn-primary mt-3">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regular Rate Package -->
+            <div class="col-md-4">
+                <div class="service-card card h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Regular Rate</h3>
+                        <p class="mb-0">From £90 per session. Ideal for regular cleaning of your home or office, with a flat rate for weekly or bi-weekly services.</p>
+                        <a href="#contact" class="btn btn-primary mt-3">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package Rate Package -->
+            <div class="col-md-4">
+                <div class="service-card card h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Package Rate</h3>
+                        <p class="mb-0">From £250 per package. A comprehensive cleaning package, perfect for deep cleans or end-of-tenancy cleaning. Get everything done in one go!</p>
+                        <a href="#contact" class="btn btn-primary mt-3">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Divider Image -->
+    <div class="divider-image" style="background-image: url('domestic_cleaning_service.jpg');" loading="lazy"></div>
+
+   <section id="testimonials" class="py-5 bg-light">
+   <div class="container py-5">
+     <div class="row justify-content-center mb-5">
+       <div class="col-lg-8 text-center">
+         <h2 class="section-title">What Our Clients Say</h2>
+         <p class="lead">See why people love our cleaning services!</p>
+       </div>
+     </div>
+     
+     
+     <!-- Testimonials Carousel -->
+     <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+       <div class="carousel-inner">
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active">
+          <div class="testimonial-card">
+            <h3>Cleaning Package</h3>
+
+            <p>"Aim High Cleaning transformed my house! They were thorough, fast, and so friendly."</p>
+            <h5>John D.</h5>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="carousel-item">
+          <div class="testimonial-card">
+            <h3>Business Cleaning</h3>
+            <p>"Excellent service. They were professional and left my office sparkling clean!"</p>
+            <h5>Mary L.</h5>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="carousel-item">
+          <div class="testimonial-card">
+            <h3>Regular Cleaning</h3>
+
+            <p>"I use their regular cleaning service. Always consistent, always great quality!"</p>
+            <h5>Sarah W.</h5>
+            <div class="stars">
+   <i class="fas fa-star"></i>
+   <i class="fas fa-star"></i>
+   <i class="fas fa-star"></i>
+   <i class="fas fa-star"></i>
+   <i class="fas fa-star"></i>
+ </div>
+          </div>
+        </div>
+        <!-- Testimonial 4 -->
+        <div class="carousel-item">
+          <div class="testimonial-card">
+            <h3>Occasional Clean</h3>
+            <p>"Fast, efficient, and very thorough. I’ll definitely use them again!"</p>
+            <h5>Chris P.</h5>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 5 -->
+        <div class="carousel-item">
+          <div class="testimonial-card">
+            <h3>Carpet Clean</h3>
+            <p>"My carpet looks brand new! Highly recommend their upholstery service."</p>
+            <h5>Lisa B.</h5>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  /* Testimonials Section */
+/* Testimonials Section */
+#testimonials {
+  overflow: hidden;
+  position: relative;
+  text-align: center; /* Centralize text in the testimonial section */
+}
+
+.testimonial-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center the testimonials container */
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 30px;
+  padding: 20px 0;
+  will-change: transform;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  min-width: 350px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  text-align: center; /* Center the text horizontally */
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-card h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.stars i {
+  color: #f39c12;
+  margin: 0 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-width: 280px;
+    padding: 20px;
+  }
+}
+
+
+
+
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Testimonial data
+    const testimonials = [
+        {
+            quote: "Aim High Cleaning transformed my house! They were thorough, fast, and so friendly.",
+            author: "John D.",
+            rating: 5
+        },
+        {
+            quote: "Excellent service. They were professional and left my office sparkling clean!",
+            author: "Mary L.",
+            rating: 5
+        },
+        {
+            quote: "I use their regular cleaning service. Always consistent, always great quality!",
+            author: "Sarah W.",
+            rating: 5
+        },
+        {
+            quote: "Fast, efficient, and very thorough. I'll definitely use them again!",
+            author: "Chris P.",
+            rating: 5
+        },
+        {
+            quote: "My carpet looks brand new! Highly recommend their upholstery service.",
+            author: "Lisa B.",
+            rating: 5
+        }
+    ];
+
+    const track = document.querySelector('.testimonial-track');
+    
+    // Duplicate testimonials to create infinite loop effect
+    const duplicatedTestimonials = [...testimonials, ...testimonials];
+    
+    // Create testimonial cards
+    duplicatedTestimonials.forEach(testimonial => {
+        const card = document.createElement('div');
+        card.className = 'testimonial-card';
+        
+        // Generate star rating
+        let stars = '';
+        const fullStars = Math.floor(testimonial.rating);
+        const hasHalfStar = testimonial.rating % 1 >= 0.5;
+        
+        for (let i = 0; i < fullStars; i++) {
+            stars += '<i class="fas fa-star"></i>';
+        }
+        
+        if (hasHalfStar) {
+            stars += '<i class="fas fa-star-half-alt"></i>';
+        }
+        
+        for (let i = 0; i < 5 - Math.ceil(testimonial.rating); i++) {
+            stars += '<i class="far fa-star"></i>';
+        }
+        
+        card.innerHTML = `
+            <p>"${testimonial.quote}"</p>
+            <h5>${testimonial.author}</h5>
+            <div class="stars">${stars}</div>
+        `;
+        
+        track.appendChild(card);
+    });
+
+    // Auto-scrolling animation
+    let speed = 1; // pixels per frame
+    let position = 0;
+    const trackWidth = track.scrollWidth / 2;
+    
+    function animate() {
+        position -= speed;
+        
+        // Reset position to create infinite loop
+        if (position < -trackWidth) {
+            position = 0;
+        }
+        
+        track.style.transform = `translateX(${position}px)`;
+        requestAnimationFrame(animate);
+    }
+    
+    // Pause on hover
+    track.addEventListener('mouseenter', () => speed = 0);
+    track.addEventListener('mouseleave', () => speed = 1);
+    
+    // Start animation
+    animate();
+});
+  
+</script>
+
+
+      <!-- Divider Image -->
+   <div class="divider-image" style="background-image: url('cleaning_person.jpg'); height: 500px; background-size: cover;" loading="lazy"></div>
+
+
+<!-- Blog Section -->
+<section id="blog" class="py-5">
+    <div class="container py-5">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h2 class="section-title">Why Regular Cleaning Matters</h2>
+                <p class="lead">Keeping your space clean is more than just making it look nice—it's about feeling better, living healthier, and staying productive. Here's why regular cleaning should be on your to-do list.</p>
+                <img src="Aimhigh_logo.png" alt="Aim High Cleaning" style="height: 100px; position: center;" loading="lazy">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="blog-post">
+                    <p>Let's be real—cleaning isn't the most exciting thing to do. But it has some serious benefits that go way beyond just having a tidy space. For starters, regular cleaning can help improve the air quality in your home or office. Dust and allergens can build up quickly, especially if you have pets or live in a busy area. By cleaning regularly, you're reducing the stuff that could be making you feel a little off, like sneezing, congestion, or headaches. Plus, you'll enjoy fresh air without any funky smells.</p>
+                    
+                    <p>Another big plus is how cleaning helps your health. All that dirt, dust, and grime that collects in corners? It’s not just annoying, it can also carry germs and bacteria that can cause illnesses. Regular cleaning means you're keeping those nasties at bay, which makes for a healthier home or workplace. Trust us, it’s worth the effort!</p>
+
+                    <p>And hey, did you know a clean space can actually make you more productive? When everything is in its place, you can think clearer and get more done. Whether you're working from home or in the office, having a clutter-free environment helps you stay focused. It’s the perfect environment for tackling tasks without distractions.</p>
+
+                    <p>So, while cleaning might not be the most exciting task, it’s definitely one that pays off. Whether you're looking to breathe better, stay healthier, or simply create a space that helps you get stuff done, a little regular cleaning goes a long way!</p>
+
+                    <a href="#contact" class="btn btn-primary mt-4">Get in Touch for Professional Cleaning</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Divider Image -->
+   <div class="divider-image" style="background-image: url('cleaning_sweeping_room.jpg'); height: 500px; background-size: cover;" loading="lazy"></div>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light-blue">
+        <div class="container py-5">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Get Your Free Quote Today</h2>
+                    <p class="lead">Ready to experience the Aim High Cleaning difference? Contact us for a free, no-obligation quote.</p>
+                    <img src="Aimhigh_logo.png" alt="Aim High Cleaning" style="height: 100px; position: center;" loading="lazy">
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="contact-info h-100">
+                        <h3 class="mb-4">Contact Information</h3>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 mb-1">Phone</h4>
+                                <a href="tel:+441234567890" class="text-decoration-none">+44 1234 567890</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 mb-1">Email</h4>
+                                <a href="mailto:info@aimhighcleaning.co.uk" class="text-decoration-none">info@aimhighcleaning.co.uk</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5 mb-1">Hours</h4>
+                                <p class="mb-0">Monday - Friday: 8am - 6pm<br>Saturday: 9am - 4pm<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                       <div class="mt-4">
+    <h4 class="h5 mb-3">Follow Us</h4>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f" style="color: #468faf;"></i></a>
+        <a href="#"><i class="fab fa-twitter" style="color: #468faf;"></i></a>
+        <a href="#"><i class="fab fa-instagram" style="color: #468faf;"></i></a>
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info h-100">
+                        <h3 class="mb-4">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                           
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   <footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-logo d-flex align-items-center">
+          <img src="Aimhigh_logo.png" alt="Aim High Cleaning" height="60" class="me-2">
+          Aim High Cleaning
+        </div>
+        <p class="mt-3">Providing premium cleaning services with attention to detail and eco-friendly products throughout Brixham and surrounding areas.</p>
+        <div class="social-icons mt-4">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div class="footer-links">
+          <h5>Services</h5>
+          <a href="index.html#services">Domestic Cleaning</a>
+          <a href="index.html#services">Deep Cleaning</a>
+          <a href="index.html#services">Commercial Cleaning</a>
+          <a href="index.html#services">End of Tenancy</a>
+          <a href="index.html#services">Carpet Cleaning</a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div class="footer-links">
+          <h5>Company</h5>
+          <a href="about.html">About Us</a>
+          
+          <a href="index.html#contact">Hiring</a>
+          <a href="about.html#blog">Blog</a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div class="footer-links">
+          <h5>Support</h5>
+          
+          <a href="about.html#contact">Contact Us</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html">Terms of Service</a>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="footer-links">
+          <h5>Areas</h5>
+          <a href="#">Torquay</a>
+          <a href="#">Paignton</a>
+          <a href="#">Newton Abbot</a>
+          <a href="#">Teignmouth</a>
+          
+        </div>
+        
+      </div>
+    </div>
+    <hr class="mt-5" style="border-color: rgba(255,255,255,0.1);">
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="mb-0">&copy; 2025 Aim High Cleaning. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <p class="mb-0">Website Designed by <a href="https://www.merchant-web.co.uk" style="color: #555555;">Merchant Services</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary btn-lg back-to-top" style="position: fixed; bottom: 20px; right: 20px; display: none; border-radius: 50%; width: 50px; height: 50px; padding: 0; text-align: center; line-height: 50px;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        // Navbar scroll effect
+        var lastScrollTop = 0;
+        $(window).scroll(function() {
+            var st = $(this).scrollTop();
+            
+            // Hide/show navbar on scroll
+            if (st > lastScrollTop && st > 100) {
+                // Scroll down
+                $('.navbar').addClass('hidden');
+            } else {
+                // Scroll up
+                $('.navbar').removeClass('hidden');
+            }
+            lastScrollTop = st;
+            
+            // Back to top button
+            if (st > 300) {
+                $('.back-to-top').fadeIn('slow');
+            } else {
+                $('.back-to-top').fadeOut('slow');
+            }
+        });
+        
+        // Back to top button
+        $('.back-to-top').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: 0}, '300');
+        });
+        
+        // Smooth scrolling for anchor links
+        $('a[href*="#"]').on('click', function(e) {
+            e.preventDefault();
+            
+            $('html, body').animate(
+                {
+                    scrollTop: $($(this).attr('href')).offset().top - 70,
+                },
+                500,
+                'linear'
+            );
+        });
+        
+        // Mobile menu close on click
+        $('.navbar-nav>li>a').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+        });
+    </script>
+    
+    
+    <script>
+    // Automatically slide the carousel every 5 seconds
+    document.addEventListener("DOMContentLoaded", function () {
+        var carousel = new bootstrap.Carousel(document.getElementById('testimonialsCarousel'), {
+            interval: 4000,  // 5 seconds for each slide
+            ride: 'carousel' // Start sliding immediately when the page loads
+        });
+    });
+</script>
+
+    
+</body>
+</html>
